@@ -49,6 +49,7 @@
 		80422E37259B0FA500BD2109 /* bought-itUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bought-itUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80422E3B259B0FA500BD2109 /* bought_itUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bought_itUITests.swift; sourceTree = "<group>"; };
 		80422E3D259B0FA500BD2109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80BC102B259B22620078A9C0 /* bought_it 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "bought_it 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,9 +588,10 @@
 		80422E24259B0FA500BD2109 /* bought_it.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				80BC102B259B22620078A9C0 /* bought_it 2.xcdatamodel */,
 				80422E25259B0FA500BD2109 /* bought_it.xcdatamodel */,
 			);
-			currentVersion = 80422E25259B0FA500BD2109 /* bought_it.xcdatamodel */;
+			currentVersion = 80BC102B259B22620078A9C0 /* bought_it 2.xcdatamodel */;
 			path = bought_it.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -10,6 +10,9 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
+    // 金額
+    @State private var price = "0"
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -17,19 +20,46 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        VStack {
+            // タイトル
+            Text("Bought It !!!")
+            // 金額入力フォーム
+            HStack {
+                TextField("0", text: $price)
+                Text("円")
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
+            // ボタン
+            HStack {
+                // 追加
+                Button(action: {
+                    // 記録する
+                    addItem()
+                }, label: {
+                    Text("追加")
+                })
+                // 削除
+                Button(action: {
+                    // 削除する
+                    deleteItems(offsets: IndexSet(integersIn: 0..<self.items.count))
+                }, label: {
+                    Text("削除")
+                })
+            }
+            // リスト表示
+            List {
+                ForEach(items) { item in
+                    Text("Item at \(item.timestamp!, formatter: itemFormatter) \(item.price!)円")
+                }
+                .onDelete(perform: deleteItems)
+            }
+            .toolbar {
+                #if os(iOS)
+                EditButton()
+                #endif
 
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
             }
         }
     }
@@ -37,8 +67,10 @@ struct ContentView: View {
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
+            // 時間
             newItem.timestamp = Date()
-
+            // 金額
+            newItem.price = self.price
             do {
                 try viewContext.save()
             } catch {
