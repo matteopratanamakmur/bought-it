@@ -41,6 +41,7 @@ struct ContentView: View {
                 // 削除
                 Button(action: {
                     // 削除する
+                    clear()
                     deleteItems(offsets: IndexSet(integersIn: 0..<self.items.count))
                 }, label: {
                     Text("削除")
@@ -111,6 +112,11 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }
+
+    private func clear() {
+        self.price = "0"
+        self.sum = 0
     }
 }
 
