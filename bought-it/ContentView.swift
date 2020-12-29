@@ -13,6 +13,7 @@ struct ContentView: View {
     
     // 金額
     @State private var price = "0"
+    @State private var sum = 0
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -61,6 +62,21 @@ struct ContentView: View {
                     Label("Add Item", systemImage: "plus")
                 }
             }
+            // 合計を表示
+            Button(action: {
+                var sum = 0
+                for item in items {
+                    if let p = Int(item.price!) {
+                        sum += p
+                    } else {
+                        sum = 0
+                        break
+                    }
+                }
+                self.sum = sum
+            }, label: {
+                Text("sum : \(self.sum)")
+            })
         }
     }
 
