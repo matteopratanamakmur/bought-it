@@ -15,6 +15,7 @@
 		80422E26259B0FA500BD2109 /* bought_it.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80422E24259B0FA500BD2109 /* bought_it.xcdatamodeld */; };
 		80422E31259B0FA500BD2109 /* bought_itTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80422E30259B0FA500BD2109 /* bought_itTests.swift */; };
 		80422E3C259B0FA500BD2109 /* bought_itUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80422E3B259B0FA500BD2109 /* bought_itUITests.swift */; };
+		80FD8D8F25A064AB0023738A /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FD8D8E25A064AB0023738A /* image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		80422E3B259B0FA500BD2109 /* bought_itUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bought_itUITests.swift; sourceTree = "<group>"; };
 		80422E3D259B0FA500BD2109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80BC102B259B22620078A9C0 /* bought_it 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "bought_it 2.xcdatamodel"; sourceTree = "<group>"; };
+		80FD8D8A25A064280023738A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80FD8D8E25A064AB0023738A /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 		80422E0D259B0F9D00BD2109 = {
 			isa = PBXGroup;
 			children = (
+				80FD8D8E25A064AB0023738A /* image.png */,
+				80FD8D8A25A064280023738A /* README.md */,
 				80422E18259B0F9D00BD2109 /* bought-it */,
 				80422E2F259B0FA500BD2109 /* bought-itTests */,
 				80422E3A259B0FA500BD2109 /* bought-itUITests */,
@@ -242,6 +247,7 @@
 			files = (
 				80422E21259B0FA500BD2109 /* Preview Assets.xcassets in Resources */,
 				80422E1E259B0FA500BD2109 /* Assets.xcassets in Resources */,
+				80FD8D8F25A064AB0023738A /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

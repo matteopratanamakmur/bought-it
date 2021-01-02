@@ -18,3 +18,9 @@ struct bought_itApp: App {
         }
     }
 }
+
+struct bought_itApp_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
